@@ -1,0 +1,23 @@
+// custom variables
+$primary: #4cafed;
+$success: #4caf7f;
+$warning: #c99f47;
+$danger: #f44336;
+$info: #23426d;
+
+
+@import "../node_modules/bootstrap/scss/_functions";
+@import "../node_modules/bootstrap/scss/_variables";
+
+
+$custom-theme-colors: (
+    "dkaccent": #857ea0,
+    "ltaccent": #94b5bb,
+    "dkshade":  #23426d,
+    "ltshade": #f6f8f5,
+);
+// ltaccent -> ltshade -> dkshade -> ltshade -> dkshade
+$theme-colors: map-merge($custom-theme-colors, $theme-colors);
+
+// import bootstrap
+@import '../node_modules/bootstrap/scss/bootstrap';

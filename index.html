@@ -23,6 +23,22 @@
             text-decoration: underline;
             text-underline-offset: 4px;
         }
+
+        .nav-item .nav-link.active {
+            background-color: var(--bs-ltaccent); /* Change this to your desired color */
+        }
+
+        .nav-picture {
+            width: 150px; /* Set the width for the thumbnail */
+            height: 70px; /* Maintain the aspect ratio */
+            padding: 5px; /* Optional: Add padding */
+        }
+
+        .nav-sm-picture {
+            width: 80px; /* Set the width for the thumbnail */
+            height: 47px; /* Maintain the aspect ratio */
+            padding: 3px; /* Optional: Add padding */
+        }
         
     </style>
 
@@ -56,14 +72,14 @@
     <!-- Bio and Photo -->
     <section id="intro" class="bg-ltaccent">
         <div class="row align-items-center pt-3 px-3">
-            <div class="col-6"> <!-- Name and Bio -->
-                <h1 class="display-4 text-light text-end py-3">Tom Sherman</h1>
-                <h6 class="display-6 text-end text-light py-lg-2">STEM Educator</h6>
-                <h6 class="display-lg-6 text-end text-light py-lg-2">Web Designer</h6>
-                <h6 class="display-lg-6 text-end text-light py-lg-2">Overall Good Guy</h6>
+            <div class="col-lg-6 text-lg-start"> <!-- Name and Bio -->
+                <h1 class="display-1 text-light py-3">Tom Sherman</h1>
+                <h6 class="display-6 text-light py-lg-2">STEM Educator</h6>
+                <h6 class="display-6 text-light py-lg-2">Web Designer</h6>
+                <h6 class="display-6 text-light py-lg-2">Overall Good Guy</h6>
 
             </div>
-            <div class="col-6">
+            <div class="col-lg-6">
                 <img src="/assets/no_background.png" class="img-fluid" alt="">
             </div>
         </div> <!-- Column -->
@@ -87,27 +103,26 @@
     <!-- Work Experience -->
     <section id="work" class="bg-dkshade">
         <h1 class="display-3 text-center text-ltshade">Work Experience</h2>
-            <div class="container py-3">
+            <div class="container py-3 d-none d-lg-block">
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
                     <li class="nav-item" role="presentation">
                         <button class="nav-link active" id="profile-tab" data-bs-toggle="tab"
                             data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane"
                             aria-selected="false">
-                            <h6 class="text-primary">LEAD Academy High School</h6>
+                            <img src="/assets/lead-academy-logo-white.webp" alt="" class="img-fluid nav-picture">
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="disabled-tab" data-bs-toggle="tab" data-bs-target="#disabled-tab-pane" type="button"
+                            role="tab" aria-controls="disabled-tab-pane" aria-selected="false">
+                            <img src="/assets/duoLogo-web-white.png" alt="" class="img-fluid nav-picture">
                         </button>
                     </li>
                     <li class="nav-item" role="presentation">
                         <button class="nav-link" id="contact-tab" data-bs-toggle="tab"
                             data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane"
                             aria-selected="false">
-                            <h6 class="text-primary">Capital One</h6>
-                        </button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="disabled-tab" data-bs-toggle="tab"
-                            data-bs-target="#disabled-tab-pane" type="button" role="tab"
-                            aria-controls="disabled-tab-pane" aria-selected="false">
-                            <h6 class="text-primary">Duo</h6>
+                            <img src="/assets/Capital-One.png" alt="" class="img-fluid nav-picture">
                         </button>
                     </li>
                 </ul>
@@ -116,48 +131,158 @@
                         aria-labelledby="profile-tab" tabindex="0">
                         <div class="row">
                             <div class="col-6">
-                                <h2 class="pt-2 px-2 text-start">LEAD Academy High School</h2>
-                                <h4 class="px-2 text-start">Chemistry Teacher</h6>
-                                <ul>
-                                    <li>Item 1</li>
-                                    <li>Item 1</li>
-                                    <li>Item 1</li>
-                                </ul>
+                                <h4 class="pt-2 px-2 text-start">LEAD Academy High School</h4>
+                                <h6 class="px-2 text-start">Chemistry Teacher</h6>
                             </div>
                             <div class="col-6">
-                                <h2 class="display px-2 pt-2 pb-5 text-end">July 2024 - Present</h2>
-                                <img src="/assets/lead-academy-logo-white.webp" alt="" class="img-fluid">
+                                <h4 class="px-2 pt-2 pb-5 text-end">July 2024 - Present</h2>
                             </div>
+                            <ul class="px-5">
+                                <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur ratione quis deserunt!</li>
+                                <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam nostrum magni sed porro impedit voluptas.</li>
+                                <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade text-ltaccent" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab"
+                        tabindex="0">
+                        <div class="row">
+                            <div class="col-6">
+                                <h4 class="pt-2 px-2 text-start">Duo</h4>
+                                <h6 class="px-2 text-start">Machine Learning Intern</h6>
+                            </div>
+                            <div class="col-6">
+                                <h4 class="display px-2 pt-2 pb-5 text-end">September 2024 - November 2024</h4>
+                            </div>
+                            <ul class="px-5">
+                                <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur ratione quis deserunt!</li>
+                                <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam nostrum magni sed porro impedit
+                                    voluptas.
+                                </li>
+                                <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+                            </ul>
                         </div>
                     </div>
                     <div class="tab-pane fade text-ltaccent" id="contact-tab-pane" role="tabpanel"
-                        aria-labelledby="contact-tab" tabindex="0">Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit. Doloremque, quaerat
-                        deserunt dicta voluptatem quos quas ut commodi officia totam libero molestias rem pariatur sunt
-                        iusto laborum iure vel ipsa aliquid? Quisquam, voluptatum. Sed harum reiciendis quos nam unde
-                        doloremque rerum aliquam accusamus. Similique dolorum quam reiciendis ut ab placeat ratione.
-                    </div>
-                    <div class="tab-pane fade text-ltaccent" id="disabled-tab-pane" role="tabpanel"
-                        aria-labelledby="disabled-tab" tabindex="0">Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit. Voluptatibus repellendus
-                        adipisci deserunt?
+                        aria-labelledby="contact-tab" tabindex="0">
+                        <div class="row">
+                            <div class="col-6">
+                                <h4 class="pt-2 px-2 text-start">Capital One</h4>
+                                <h6 class="px-2 text-start">Software Engineering Intern</h6>
+                            </div>
+                            <div class="col-6">
+                                <h4 class="px-2 pt-2 pb-5 text-end">June 2024 - August 2024</h2>
+                            </div>
+                            <ul class="px-5">
+                                <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur ratione quis deserunt!</li>
+                                <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam nostrum magni sed porro impedit voluptas.
+                                </li>
+                                <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
+            <div class="container py-3 d-lg-none">
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="lead-sm-tab" data-bs-toggle="tab" data-bs-target="#lead-sm-pane"
+                                    type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">
+                                    <img src="/assets/lead-academy-logo-white.webp" alt="" class="img-fluid nav-sm-picture">
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="duo-tab" data-bs-toggle="tab" data-bs-target="#duo-sm-pane"
+                                    type="button" role="tab" aria-controls="disabled-tab-pane" aria-selected="false">
+                                    <img src="/assets/duoLogo-web-white.png" alt="" class="img-fluid nav-sm-picture">
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="capital-one-sm" data-bs-toggle="tab" data-bs-target="#capital-one-sm-pane" type="button"
+                                    role="tab" aria-controls="contact-tab-pane" aria-selected="false">
+                                    <img src="/assets/Capital-One.png" alt="" class="img-fluid nav-sm-picture">
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active text-ltaccent" id="lead-sm-pane" role="tabpanel"
+                                aria-labelledby="profile-tab" tabindex="0">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <h4 class="pt-2 px-2 text-start">LEAD Academy High School</h4>
+                                        <h6 class="px-2 text-start">Chemistry Teacher</h6>
+                                    </div>
+                                    <div class="col-6">
+                                        <h6 class="px-2 pt-2 pb-5 text-end">July 2024 - Present</h6>
+                                    </div>
+                                    <ul class="px-5">
+                                        <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur ratione quis deserunt!</li>
+                                        <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam nostrum magni sed porro impedit
+                                            voluptas.</li>
+                                        <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade text-ltaccent" id="duo-sm-pane" role="tabpanel" aria-labelledby="duo"
+                                tabindex="0">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <h4 class="pt-2 px-2 text-start">Duo</h4>
+                                        <h6 class="px-2 text-start">Machine Learning Intern</h6>
+                                    </div>
+                                    <div class="col-6">
+                                        <h6 class="display px-2 pt-2 pb-5 text-end">September 2024 - November 2024</h6>
+                                    </div>
+                                    <ul class="px-5">
+                                        <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur ratione quis deserunt!</li>
+                                        <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam nostrum magni sed porro impedit
+                                            voluptas.
+                                        </li>
+                                        <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade text-ltaccent" id="capital-one-sm-pane" role="tabpanel" aria-labelledby="capital-one"
+                                tabindex="0">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <h4 class="pt-2 px-2 text-start">Capital One</h4>
+                                        <h6 class="px-2 text-start">Software Engineering Intern</h6>
+                                    </div>
+                                    <div class="col-6">
+                                        <h6 class="px-2 pt-2 pb-5 text-end">June 2024 - August 2024</h6>
+                                    </div>
+                                    <ul class="px-5">
+                                        <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur ratione quis deserunt!</li>
+                                        <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam nostrum magni sed porro impedit
+                                            voluptas.
+                                        </li>
+                                        <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
     </section>
 
     <section id="education" class="bg-ltshade">
         <h1 class="display-3 text-center text-dkshade">Education</h2>
             <div class="container py-3">
                 <div class="row align-items-top m-3">
-                    <div class="col-6">
+                    <div class="col-lg-6 text-center text-lg-start">
                         <h1 class="text-dkshade">Bachelor of Science in Engineering</h1>
                         <h2 class="text-dkshade">Computer Science</h2>
-                        <h2 class="text-dkshade">GPA: 3.6</h2>
+                        <h2 class="text-dkshade">3.6 GPA</h2>
+                        <h2 class="text-dkshade">Courses</h2>
+                        <p class="fw-bold text-dkshade">Data Structures and Algorithms / Calculus III / Statistics / Operating Systems / Machine Learning / Software Engineering / Web Development / Linear Algebra / Differential Equations / Discrete Math</p>
                     </div> <!-- Grades and Scores-->
                     <div class="col-6">
+                        <div class="d-none d-lg-block">
                         <img src="/assets/diploma.png" class="img-fluid border border-5 border-primary rounded"
                             alt="diploma">
+                        </div>
                     </div> <!-- Diploma Image -->
                 </div> <!-- Row -->
             </div>
@@ -166,11 +291,11 @@
     <!-- Footer -->
     <ul class="nav justify-content-center">
         <li class="nav-item p-3">
-            <a class="nav-link active" aria-current="page" href="https://www.linkedin.com/in/tom-sherman/"><i
+            <a class="nav-link active bg-light" aria-current="page" href="https://www.linkedin.com/in/tom-sherman/"><i
                     class="bi bi-linkedin fs-1 text-primary"></i></a>
         </li>
         <li class="nav-item p-3">
-            <a class="nav-link active" aria-current="page" href="https://github.com/tsherman181"><i
+            <a class="nav-link active bg-light" aria-current="page" href="https://github.com/tsherman181"><i
                     class="bi bi-github fs-1 text-primary"></i></i></a>
         </li>
     </ul>

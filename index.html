@@ -47,6 +47,10 @@
             padding: 3px;
             /* Optional: Add padding */
         }
+
+        .tab-pane-sm {
+            min-height: 350px;
+        }
     </style>
 
 
@@ -188,18 +192,15 @@
                                 <h4 class="px-2 pt-2 pb-5 text-end">June 2024 - August 2024</h2>
                             </div>
                             <ul class="px-5">
-                                <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur ratione quis
-                                    deserunt!</li>
-                                <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam nostrum magni sed
-                                    porro impedit voluptas.
-                                </li>
-                                <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+                                <li>Created a full-stack web app for consumer error reporting using JavaScript, Java, Spring Boot, and LitElement</li>
+                                <li>Interacted with the Jira API to automate the creation of error tickets</li>
+                                <li>Taught kids in underserved communities to code HTML and CSS through the Capital One Coders Program</li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="container py-3 d-lg-none">
+            <div class="container pt-3 d-lg-none">
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
                     <li class="nav-item" role="presentation">
                         <button class="nav-link active" id="lead-sm-tab" data-bs-toggle="tab"
@@ -223,7 +224,7 @@
                     </li>
                 </ul>
                 <div class="tab-content" id="myTabContent">
-                    <div class="tab-pane fade show active text-ltaccent" id="lead-sm-pane" role="tabpanel" aria-labelledby="profile-tab"
+                    <div class="tab-pane tab-pane-sm fade show active text-ltaccent" id="lead-sm-pane" role="tabpanel" aria-labelledby="profile-tab"
                         tabindex="0">
                         <div class="row">
                             <div class="col-6">
@@ -243,7 +244,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="tab-pane fade text-ltaccent" id="duo-sm-pane" role="tabpanel" aria-labelledby="duo" tabindex="0">
+                    <div class="tab-pane tab-pane-sm fade text-ltaccent" id="duo-sm-pane" role="tabpanel" aria-labelledby="duo" tabindex="0">
                         <div class="row">
                             <div class="col-6">
                                 <h4 class="pt-2 px-2 text-start">Duo</h4>
@@ -263,7 +264,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="tab-pane fade text-ltaccent" id="capital-one-sm-pane" role="tabpanel" aria-labelledby="capital-one"
+                    <div class="tab-pane tab-pane-sm fade text-ltaccent" id="capital-one-sm-pane" role="tabpanel" aria-labelledby="capital-one"
                         tabindex="0">
                         <div class="row">
                             <div class="col-6">
@@ -274,13 +275,9 @@
                                 <h6 class="px-2 pt-2 pb-5 text-end">June 2024 - August 2024</h6>
                             </div>
                             <ul class="px-5">
-                                <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur ratione quis
-                                    deserunt!</li>
-                                <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam nostrum magni sed porro
-                                    impedit
-                                    voluptas.
-                                </li>
-                                <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+                                <li>Created a full-stack web app for consumer error reporting using JavaScript, Java, Spring Boot, and LitElement</li>
+                                <li>Interacted with the Jira API to automate the creation of error tickets</li>
+                                <li>Taught kids in underserved communities to code HTML and CSS through the Capital One Coders Program</li>
                             </ul>
                         </div>
                     </div>
@@ -296,22 +293,29 @@
     <!-- Education -->
     <section id="education" class="bg-ltshade">
         <h1 class="display-3 text-center text-dkshade pb-4">Education</h2>
-            <div class="card mx-3">
-                <div class="card-header">
+            <div class="row align-items-center">
+                <div class="col-12 col-lg-6">
+                    <div class="card mx-3">
+                        <div class="card-header text-center">
                             <h5>University of Michigan</h5>
                             <p>August 2020 - May 2024</p>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Bachelors of Science in Engineering</h5>
+                            <h6 class="card-title">Computer Science</h6>
+                            <p class="card-text">3.6 GPA</p>
+                            <p class="card-title fw-bold">Core Courses</p>
+                            <p class="card-text">Data Structures and Algorithms / Operating Systems / Machine Learning / Web Development /
+                                Software Engineering</p>
+                            <p class="card-title fw-bold">Technical Skills</p>
+                            <p class="card-text">C++ / Python / Swift / SQL / HTML / CSS / Git</p>
+                            <p class="card-title fw-bold">Extracurriculars</p>
+                            <p class="card-text">Michigan Data Science Team Vice President / Michigan Hillel</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="card-body">
-                    <h5 class="card-title">Bachelors of Science in Engineering</h5>
-                    <h6 class="card-title">Computer Science</h6>
-                    
-                    <p class="card-text">3.6 GPA</p>
-                    <p class="card-title fw-bold">Core Courses</p>
-                    <p class="card-text">Data Structures and Algorithms / Operating Systems / Machine Learning / Web Development / Software Engineering</p>
-                    <p class="card-title fw-bold">Technical Skills</p>
-                    <p class="card-text">C++ / Python / Swift / SQL / HTML / CSS / Git</p>
-                    <p class="card-title fw-bold">Extracurriculars</p>
-                    <p class="card-text">Vice President Michigan Data Science Team / Michigan Hillel</p>
+                <div class="d-none d-lg-block col-lg-6">
+                    <img src="/assets/diploma.png" alt="" class="img-fluid border border-5 rounded border-primary">
                 </div>
             </div>
     </section>

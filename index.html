@@ -5,19 +5,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.min.css"> <!-- Custom Saas file with theme colors -->
+    <link rel="stylesheet" id="theme-stylesheet" href="css/main.min.css"> <!-- Custom Saas file with theme colors -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!-- Icons -->
     <title>Tom Sherman</title>
 
-
     <style>
         section {
-            padding: 60px 0;
-        }
-
-        #intro {
-            padding: 0px 0;
+            padding: 40px 0;
         }
 
         .nav-link {
@@ -59,7 +54,7 @@
 <body class="bg-ltshade">
     <!-- Navbar -->
     <nav class="navbar navbar-expand p-4 navbar-ltshade bg-ltaccent">
-        <a class="navbar-brand text-ltshade navbar" style="font-family: 'Copperplate', 'Fantasy';" href="#">Tom
+        <a class="navbar-brand d-none d-lg-block text-ltshade navbar" style="font-family: 'Copperplate', 'Fantasy';" href="#">Tom
             Sherman</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -77,13 +72,19 @@
                 <li class="nav-item">
                     <a class="nav-link text-ltshade" href="#education">Education</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link text-ltshade" href="#tutoring">Tutoring</a>
+                </li>
             </ul>
         </div>
+        <button class="btn btn-ltaccent text-ltshade btn-lg" onclick=changeColor()>
+            <i class="bi bi-palette-fill"></i>
+        </button>
     </nav>
 
     <!-- Bio and Photo -->
-    <section id="intro" class="bg-ltaccent">
-        <div class="row align-items-center pt-3 px-3">
+    <section style="padding: 0px 0;" class="bg-ltaccent">
+        <div class="row align-items-center pt-3 mx-4">
             <div class="col-lg-6 text-lg-start"> <!-- Name and Bio -->
                 <h1 class="display-1 text-ltshade py-3">Tom Sherman</h1>
                 <h6 class="display-6 text-ltshade py-lg-2">STEM Educator</h6>
@@ -101,16 +102,25 @@
 
     <!-- About -->
     <section id="about" class="bg-ltshade">
-        <div class="row align-items-center px-3">
-            <div class="col-6">
-                <img src="/assets/ben_brown.jpg" class="img-fluid" alt="">
-            </div>
-            <div class="col-6"> <!-- Name and Bio -->
-                <h1 class="display-1 text-dkshade text-right fs-1 fs-md-2 fs-lg-3 fs-xl-4">About Me</h1>
-                <p class="text-dkshade text-right">Hi! My name is Tom and I am a recent University of Michigan grad
-                    beginning life as a high school chemistry teacher in Nashville!</p>
+        <div class="container text-center d-lg-none"> <!-- About Section for Mobile -->
+            <h1 class="display-3 text-dkshade">About Me</h1>
+            <p class="text-dkshade text-left mx-3">Hi! My name is Tom and I am a recent University of Michigan grad
+                beginning life as a high school chemistry teacher in Nashville</p>
+        </div>
+        <div class="container d-none d-lg-block"> <!-- About Section for Desktop -->
+            <h1 class="display-3 text-dkshade text-center p-3">About Me</h1>
+            <div class="row align-items-top justify-content-between">
+                <div class="col-5">
+                    <img src="/assets/suit.jpg" alt="" class="img-fluid">
+                </div>
+                <div class="col-5">
+                    <p class="text-dkshade text-left mx-3 fs-3" style="line-height: 2;">Hi! My name is Tom and I am a
+                        recent University of Michigan grad
+                        beginning life as a high school chemistry teacher in Nashville</p>
+                </div>
             </div>
         </div>
+
     </section>
 
     <!-- Work Experience -->
@@ -189,12 +199,14 @@
                                 <h6 class="px-2 text-start">Software Engineering Intern</h6>
                             </div>
                             <div class="col-6">
-                                <h4 class="px-2 pt-2 pb-5 text-end">June 2024 - August 2024</h2>
+                                <h4 class="px-2 pt-2 pb-5 text-end">June 2023 - August 2023</h2>
                             </div>
                             <ul class="px-5">
-                                <li>Created a full-stack web app for consumer error reporting using JavaScript, Java, Spring Boot, and LitElement</li>
+                                <li>Created a full-stack web app for consumer error reporting using JavaScript, Java,
+                                    Spring Boot, and LitElement</li>
                                 <li>Interacted with the Jira API to automate the creation of error tickets</li>
-                                <li>Taught kids in underserved communities to code HTML and CSS through the Capital One Coders Program</li>
+                                <li>Taught kids in underserved communities to code HTML and CSS through the Capital One
+                                    Coders Program</li>
                             </ul>
                         </div>
                     </div>
@@ -224,8 +236,8 @@
                     </li>
                 </ul>
                 <div class="tab-content" id="myTabContent">
-                    <div class="tab-pane tab-pane-sm fade show active text-ltaccent" id="lead-sm-pane" role="tabpanel" aria-labelledby="profile-tab"
-                        tabindex="0">
+                    <div class="tab-pane tab-pane-sm fade show active text-ltaccent" id="lead-sm-pane" role="tabpanel"
+                        aria-labelledby="profile-tab" tabindex="0">
                         <div class="row">
                             <div class="col-6">
                                 <h4 class="pt-2 px-2 text-start">LEAD Academy High School</h4>
@@ -237,14 +249,16 @@
                             <ul class="px-5">
                                 <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur ratione quis
                                     deserunt!</li>
-                                <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam nostrum magni sed porro
+                                <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam nostrum magni sed
+                                    porro
                                     impedit
                                     voluptas.</li>
                                 <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
                             </ul>
                         </div>
                     </div>
-                    <div class="tab-pane tab-pane-sm fade text-ltaccent" id="duo-sm-pane" role="tabpanel" aria-labelledby="duo" tabindex="0">
+                    <div class="tab-pane tab-pane-sm fade text-ltaccent" id="duo-sm-pane" role="tabpanel"
+                        aria-labelledby="duo" tabindex="0">
                         <div class="row">
                             <div class="col-6">
                                 <h4 class="pt-2 px-2 text-start">Duo</h4>
@@ -256,7 +270,8 @@
                             <ul class="px-5">
                                 <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur ratione quis
                                     deserunt!</li>
-                                <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam nostrum magni sed porro
+                                <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam nostrum magni sed
+                                    porro
                                     impedit
                                     voluptas.
                                 </li>
@@ -264,8 +279,8 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="tab-pane tab-pane-sm fade text-ltaccent" id="capital-one-sm-pane" role="tabpanel" aria-labelledby="capital-one"
-                        tabindex="0">
+                    <div class="tab-pane tab-pane-sm fade text-ltaccent" id="capital-one-sm-pane" role="tabpanel"
+                        aria-labelledby="capital-one" tabindex="0">
                         <div class="row">
                             <div class="col-6">
                                 <h4 class="pt-2 px-2 text-start">Capital One</h4>
@@ -275,18 +290,19 @@
                                 <h6 class="px-2 pt-2 pb-5 text-end">June 2024 - August 2024</h6>
                             </div>
                             <ul class="px-5">
-                                <li>Created a full-stack web app for consumer error reporting using JavaScript, Java, Spring Boot, and LitElement</li>
+                                <li>Created a full-stack web app for consumer error reporting using JavaScript, Java,
+                                    Spring Boot, and LitElement</li>
                                 <li>Interacted with the Jira API to automate the creation of error tickets</li>
-                                <li>Taught kids in underserved communities to code HTML and CSS through the Capital One Coders Program</li>
+                                <li>Taught kids in underserved communities to code HTML and CSS through the Capital One
+                                    Coders Program</li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
-            </div>
-            </div>
             <div class="container text-end">
-                <a href="/assets/ben_brown.jpg" download class="btn btn-primary text-ltshade">Download Full CV</a> <!-- Replace picture of Ben Brown with resume -->
+                <a href="/assets/ben_brown.jpg" download class="btn btn-primary text-ltshade">Download Full CV</a>
+                <!-- Replace picture of Ben Brown with resume -->
             </div>
     </section>
 
@@ -305,7 +321,8 @@
                             <h6 class="card-title">Computer Science</h6>
                             <p class="card-text">3.6 GPA</p>
                             <p class="card-title fw-bold">Core Courses</p>
-                            <p class="card-text">Data Structures and Algorithms / Operating Systems / Machine Learning / Web Development /
+                            <p class="card-text">Data Structures and Algorithms / Operating Systems / Machine Learning /
+                                Web Development /
                                 Software Engineering</p>
                             <p class="card-title fw-bold">Technical Skills</p>
                             <p class="card-text">C++ / Python / Swift / SQL / HTML / CSS / Git</p>
@@ -334,6 +351,28 @@
 
 
     <!-- JS Here -->
+
+    <script>
+
+        const themes = ['css/blue.css', 'css/sand.css', 'css/pink.css', 'css/purple.css', 'css/grey.css'];
+        var rand = Math.floor(Math.random() * themes.length)
+
+        function changeColor() {
+            rand += 1
+            var linkElement = document.getElementById('theme-stylesheet');
+            linkElement.setAttribute('href', themes[rand % themes.length])
+        }
+
+        function pickRandomTheme() {
+            var linkElement = document.getElementById('theme-stylesheet');
+            linkElement.setAttribute('href', themes[rand]);
+        }
+
+        pickRandomTheme();
+    </script>
+
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
         </script>

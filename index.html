@@ -5,11 +5,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" id="theme-stylesheet" href="css/main.min.css"> <!-- Custom Saas file with theme colors -->
+    <link rel="stylesheet" id="theme-stylesheet" href=""> <!-- Custom Saas file with theme colors -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!-- Icons -->
     <title>Tom Sherman</title>
-
+    <script src="main.js"></script>
     <style>
         section {
             padding: 40px 0;
@@ -22,25 +22,18 @@
 
         .nav-item .nav-link.active {
             background-color: var(--bs-ltaccent);
-            /* Change this to your desired color */
         }
 
         .nav-picture {
             width: 150px;
-            /* Set the width for the thumbnail */
             height: 70px;
-            /* Maintain the aspect ratio */
             padding: 5px;
-            /* Optional: Add padding */
         }
 
         .nav-sm-picture {
             width: 80px;
-            /* Set the width for the thumbnail */
             height: 47px;
-            /* Maintain the aspect ratio */
             padding: 3px;
-            /* Optional: Add padding */
         }
 
         .tab-pane-sm {
@@ -54,7 +47,7 @@
 <body class="bg-ltshade">
     <!-- Navbar -->
     <nav class="navbar navbar-expand p-4 navbar-ltshade bg-ltaccent">
-        <a class="navbar-brand d-none d-lg-block text-ltshade navbar" style="font-family: 'Copperplate', 'Fantasy';" href="#">Tom
+        <a class="navbar-brand d-none d-lg-block text-ltshade navbar" style="font-family: 'Copperplate', 'Fantasy';" href="/index.html">Tom
             Sherman</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -64,16 +57,16 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link text-ltshade" href="#about">About</a>
+                    <a class="nav-link text-ltshade" href="/index.html#about">About</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link text-ltshade" href="#work">Work</a>
+                    <a class="nav-link text-ltshade" href="/index.html#work">Work</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-ltshade" href="#education">Education</a>
+                    <a class="nav-link text-ltshade" href="/index.html#education">Education</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-ltshade" href="#tutoring">Tutoring</a>
+                    <a class="nav-link text-ltshade" href="/tutoring.html">Tutoring</a>
                 </li>
             </ul>
         </div>
@@ -348,28 +341,6 @@
                     class="bi bi-github fs-1 text-primary"></i></i></a>
         </li>
     </ul>
-
-
-    <!-- JS Here -->
-
-    <script>
-
-        const themes = ['css/blue.css', 'css/sand.css', 'css/pink.css', 'css/purple.css', 'css/grey.css'];
-        var rand = Math.floor(Math.random() * themes.length)
-
-        function changeColor() {
-            rand += 1
-            var linkElement = document.getElementById('theme-stylesheet');
-            linkElement.setAttribute('href', themes[rand % themes.length])
-        }
-
-        function pickRandomTheme() {
-            var linkElement = document.getElementById('theme-stylesheet');
-            linkElement.setAttribute('href', themes[rand]);
-        }
-
-        pickRandomTheme();
-    </script>
 
 
 
